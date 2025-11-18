@@ -1,6 +1,5 @@
 {% set name = "apache-airflow-providers-common-io" %}
-{% set version = "1.6.4" %}
-{% set python_min = "3.10" %}
+{% set version = "1.6.5" %}
 
 package:
   name: {{ name|lower }}
@@ -8,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/apache_airflow_providers_common_io-{{ version }}.tar.gz
-  sha256: 0013269e3b4030ba6451cf92fe37da993838bf58fd4862733069f978569941cd
+  sha256: 9eeb3e744b9758ba68f75d72605a7e68519e3e5432efa5e21a550ddec5d0c050
 
 build:
   noarch: python
@@ -30,16 +29,18 @@ test:
   commands:
     - pip check
   requires:
-    - pip
     - python {{ python_min }}
+    - pip
 
 about:
-  home: https://airflow.apache.org/
+  home: https://github.com/apache/airflow/
   summary: Provider package apache-airflow-providers-common-io for Apache Airflow
   license: Apache-2.0
-  license_file: src/airflow/providers/common/io/LICENSE
+  license_file:
+    - LICENSE
+    - NOTICE
   license_family: Apache
-  doc_url: https://airflow.apache.org/docs/apache-airflow-providers-common-sql/stable/index.html
+  doc_url: https://airflow.apache.org/docs/apache-airflow-providers-common-io/stable/index.html
   dev_url: https://github.com/apache/airflow/
 
 extra:
