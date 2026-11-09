@@ -1,6 +1,6 @@
 context:
   name: apache-airflow-providers-common-io
-  version: "1.11.0"
+  version: "1.11.1"
 
 package:
   name: ${{ name|lower }}
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/apache_airflow_providers_common_io-${{ version }}.tar.gz
-  sha256: 72bdfbbab9472779e9be20e9e1d1779603fe16aab8556b69d340fda40a87a666
+  sha256: c0ff638569e337b4dcd2d1dae0019a14aa5676c10676505ff732c87210da1fd5
 
 build:
   noarch: python
@@ -19,7 +19,7 @@ requirements:
   host:
     - python ${{ python_min }}.*
     - pip
-    - flit-core ==4.1.0
+    - flit-core ==4.2.0
   run:
     - python >=${{ python_min }}
     - apache-airflow >=2.11.0
